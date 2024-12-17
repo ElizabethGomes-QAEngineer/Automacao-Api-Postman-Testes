@@ -6,7 +6,7 @@ Este cenário foi exportado da "collections" direto do postman
 
 [Download Postman](https://www.postman.com/downloads/)
 
-site 
+Cenário criado apartir do site 
 
 [Serverest](https://serverest.dev/)
 
@@ -44,3 +44,73 @@ Clique em Open para importar.
 
 **5. Coleção Importada**
 Sua coleção do Postman aparecerá na aba Collections. Agora você pode rodar os testes de API
+
+
+
+Como Realizar os Testes Dentro do Postman
+
+Em "environments" configurar **globals** 
+
+**1. "Variable"**
+
+```bash
+baseURL
+```
+```bash
+https://serverest.dev
+```
+
+**2. "Variable"**
+
+```bash
+user
+```
+```bash
+"qaenginieer419@qa.com.br"
+```
+
+
+**3. "Variable"**
+
+```bash
+password
+```
+```bash
+teste
+```
+
+**4. "Variable"**
+
+```bash
+accessToken
+```
+
+**5. "Variable"**
+
+```bash
+randomProductTest1
+```
+
+```bash
+randomProduct123
+```
+
+
+**6. "Variable"**
+
+```bash
+newProductId27
+```
+
+**7. "Variable"**
+```bash
+nome
+```
+
+```bash
+Elizabeth
+```
+
+
+
+   
