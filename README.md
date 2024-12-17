@@ -47,7 +47,7 @@ Sua coleção do Postman aparecerá na aba Collections. Agora você pode rodar o
 
 
 
-Como Realizar os Testes Dentro do Postman
+# Como Realizar os Testes Dentro do Postman
 
 Em "environments" configurar **globals** 
 
