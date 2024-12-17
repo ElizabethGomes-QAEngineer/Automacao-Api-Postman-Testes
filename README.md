@@ -56,6 +56,9 @@ Em "environments" configurar **globals**
 ```bash
 baseURL
 ```
+
+**"Initial Value"/Current Value**
+
 ```bash
 https://serverest.dev
 ```
@@ -65,6 +68,9 @@ https://serverest.dev
 ```bash
 user
 ```
+
+**"Initial Value"/Current Value**
+
 ```bash
 "qaenginieer419@qa.com.br"
 ```
@@ -75,6 +81,8 @@ user
 ```bash
 password
 ```
+**"Initial Value"/Current Value**
+
 ```bash
 teste
 ```
@@ -91,10 +99,11 @@ accessToken
 randomProductTest1
 ```
 
+**"Initial Value"/Current Value**
+
 ```bash
 randomProduct123
 ```
-
 
 **6. "Variable"**
 
@@ -106,6 +115,7 @@ newProductId27
 ```bash
 nome
 ```
+**"Initial Value"/Current Value**
 
 ```bash
 Elizabeth
