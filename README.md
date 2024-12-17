@@ -1,4 +1,4 @@
-Baixe o arquivo .json do repositório no GitHub. [Automacao-Api-Postman-Testes](https://github.com/ElizabethGomes-QAEngineer/Automacao-Api-Postman-Testes.git)
+Baixe o arquivo .json do repositório no GitHub.  [Automacao-Api-Postman-Testes](https://github.com/ElizabethGomes-QAEngineer/Automacao-Api-Postman-Testes.git)
 2. Baixe o arquivo da coleção do Postman:
 Abra o Postman, clique em Import e faça o upload do arquivo.
 Execute os testes.
