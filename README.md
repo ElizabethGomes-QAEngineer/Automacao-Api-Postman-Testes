@@ -121,6 +121,24 @@ nome
 Elizabeth
 ```
 
+# Passo a Passo Para Executar os Testes 
 
 
+1. Em **POST** Cadastro Usuario em **cadastrar usuário** alterar o email para  **"qaenginieer419@qa.com.br"**
+   depois clicar em **"save"**
+
+2. Em **POST** Login em **Automação Login Gera Diferentes Tokens**
+  alterar o email para  **"qaenginieer419@qa.com.br"**
+  depois clicar em **"save"**
+
+3. Em **POST** Produtos em **Automação Login Criar Produto Rondomico** na aba **scripts** em **pre-request**
+   alterar o email para  **"qaenginieer419@qa.com.br"**
+   depois clicar em **"save"**
+
+   vai gerar um Id do produto clicar neste ID e **copia**
+
+5. Em **GET** produtos em **Automação Encontrar Produto ID** {{baseURL}}/produtos/ o id do produto que foi copiado
+   depois clicar em **"save"**
+
+6. Em 
    
