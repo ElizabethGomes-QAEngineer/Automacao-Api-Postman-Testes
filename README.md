@@ -121,7 +121,7 @@ nome
 Elizabeth
 ```
 
-# Passo a Passo Para Executar os Testes 
+# Passo a Passo Configurações 
 
 
 1. Em **POST** Cadastro Usuario em **cadastrar usuário**
@@ -157,4 +157,21 @@ Elizabeth
 6. Em **DELETE** produtos em **Deletar Produto Criado Randomicamente**
    {{baseURL}}/produtos/ o id do produto que foi copiado
    depois clicar em **"save"**
+
+
+# Ordem para Executar os Testes dar um **"send"**
+
+1. **POST** Cadastra Usuario
+2. **POST** Automação Login Gera Diferentes Tokens
+3. **POST** Automação Usuário Randomico
+4. **POST** Automação Login Criar Produto Randomico
+5. **GET** Automação Encontrar Produto ID
+6. **PUT** Alterar Produto ID randomico
+7. **DELETE** Deleta Produto Criado Randomicamente
+
+
+
+**no caso de pesquisa de URL seria {{baseURL}}/  pode ser usuarios , login 
+e produtos para colocar o id 
+exemplo seria assim {{baseURL}}/produtos/IUpT2f0TSJGV5kB5**
    
