@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "c84673e5-b489-4a37-b79d-5665ae38dbcf",
+		"name": "Severest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39817848"
+	},
+	"item": [
+		{
+			"name": "CADASTRO USUARIO",
+			"item": [
+				{
+					"name": "Cadastrar Usuário",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"status code is 201\" , function () { \r",
+									"   pm.response.to.have.status(201)\r",
+									"\r",
+									"})\r",
+									"\r",
+									"\r",
+									"pm.test(\"response time is less than 645ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(645)\r",
+									"\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Elizabeth QA Enginieer Brazil\",\r\n  \"email\": \"qaenginieer518@qa.com.br\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/usuarios",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Automação Usuário Randomico",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const randomNumber = Math.floor(Math.random()*9000)\r",
+									"const randomName = `user Number ${randomNumber}`\r",
+									"const randomEmail = `name.${randomNumber}@qa.com`  \r",
+									"\r",
+									"pm.globals.set('email',randomEmail)\r",
+									"pm.globals.set('nome',randomName)\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"status code is 201\" , function (){\r",
+									"  pm.response.to.have.status(201)\r",
+									"  \r",
+									"  })\r",
+									"\r",
+									"pm.test(\"response time is less than 645ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(645)\r",
+									"\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{acessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nome\": \"{{nome}}\",\r\n   \"email\": \"{{email}}\",\r\n   \"password\": \"teste\",\t\r\n   \"administrador\": \"true\"\r\n\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/usuarios",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "Automação Login Gera Diferentes Tokens",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let responseJson = pm.response.json()\r",
+									"\r",
+									"let tokenSplit = responseJson['authorization'].split('')\r",
+									"\r",
+									"pm.globals.set(\"acessToken\", tokenSplit[1])\r",
+									"\r",
+									"pm.test(\"status code is 200\" , function () { \r",
+									"   pm.response.to.have.status(200)\r",
+									"\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{acessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \r\n  \"email\": \"qaenginieer518@qa.com.br\",\r\n  \"password\": \"teste\"\r\n\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUTOS",
+			"item": [
+				{
+					"name": "Automação Login Criar Produto Randomico",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json()\r",
+									"\r",
+									"pm.test(\"status code is 201\" , function () { \r",
+									"   pm.response.to.have.status(201)\r",
+									"\r",
+									"})\r",
+									"\r",
+									"if(pm.response.code == 201) {\r",
+									"   pm.globals.set('newProductId27', responseJson._id)\r",
+									"\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const loginRequest = {\r",
+									"\r",
+									"        url:pm.environment.get('baseURL') + '/login' , \r",
+									"        method: 'POST' , \r",
+									"        headers: {\r",
+									"                'Content-Type': 'application/json'\r",
+									"                 },\r",
+									"        body:{\r",
+									"\r",
+									"              mode: 'raw',\r",
+									"              raw:JSON.stringify({\r",
+									"                \r",
+									"                     email:'qaenginieer518@qa.com.br' , \r",
+									"                     password:'teste',\r",
+									"                     }),\r",
+									"\r",
+									"              options:{\r",
+									"                  raw:{\r",
+									"                        language:'json'\r",
+									"                      }\r",
+									"              }\r",
+									"         }\r",
+									"\r",
+									"}\r",
+									"\r",
+									"pm.sendRequest(loginRequest, function (err, response) {\r",
+									"        let resJson = response.json()\r",
+									"        let tokenSplit=resJson['authorization'].split(' ')\r",
+									"        pm.environment.set('acessToken',tokenSplit[1])\r",
+									"\r",
+									"}),\r",
+									"\r",
+									"\r",
+									"pm.globals.set('randomProductTest1' ,`product${Math.random()}`)\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{acessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"nome\": \"{{randomProductTest1}}\",\r\n      \"preco\": 1501,\r\n      \"descricao\": \"ipad\",\r\n      \"quantidade\": 78\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/produtos",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Automação Encontrar Produto ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"status code is 200\" , function () { \r",
+									"    pm.response.to.have.status(200)\r",
+									"\r",
+									"})\r",
+									"\r",
+									"\r",
+									"pm.test(\"response time is less than 645ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(645)\r",
+									"\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/produtos/{{newProductId27}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"produtos",
+								"{{newProductId27}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Produto ID Randomico",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"\r",
+									"pm.test(\"response time is less than 645ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(645)\r",
+									"\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{acessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"nome\": \"{{randomProductTest1}}\",\r\n  \"preco\": \"15020\",\r\n  \"descricao\": \"tv\",\r\n  \"quantidade\": \"69\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/IUpT2f0TSJGV5kB5",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"IUpT2f0TSJGV5kB5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Produto Criado Randomicamente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"status code is 200\" , function () { \r",
+									"    pm.response.to.have.status(200)\r",
+									"\r",
+									"})\r",
+									"\r",
+									"pm.test(\"product deleted sucessfully\" , function () {\r",
+									"    var jsonData = pm.response.json()\r",
+									"    pm.expect(jsonData.message).to.eql(\"registro excluido com sucesso\")\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{acessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/produtos/IUpT2f0TSJGV5kB5",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"produtos",
+								"IUpT2f0TSJGV5kB5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
