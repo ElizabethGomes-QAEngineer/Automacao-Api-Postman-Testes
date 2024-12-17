@@ -10,12 +10,12 @@ Cenário criado apartir do site
 
 [Serverest](https://serverest.dev/)
 
-💡
+> **💡 NOTA:**
 
-Baixe o arquivo .json do repositório no GitHub.  [Automacao-Api-Postman-Testes](https://github.com/ElizabethGomes-QAEngineer/Automacao-Api-Postman-Testes/blob/main/Severest%20API.postman_collection.json)
-Baixe o arquivo da coleção do Postman:
-Abra o Postman, clique em Import e faça o upload do arquivo.
-Execute os testes.
+> Baixe o arquivo .json do repositório no GitHub.  [Automacao-Api-Postman-Testes](https://github.com/ElizabethGomes-QAEngineer/Automacao-Api-Postman-Testes/blob/main/Severest%20API.postman_collection.json)
+> Baixe o arquivo da coleção do Postman:
+> Abra o Postman, clique em Import e faça o upload do arquivo.
+> Execute os testes.
 
 
 # 📝 Passo a Passo para Importar a Coleção do Postman
