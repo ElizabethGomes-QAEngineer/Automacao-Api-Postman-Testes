@@ -10,6 +10,7 @@ Cenário criado apartir do site
 
 [Serverest](https://serverest.dev/)
 
+💡
 
 Baixe o arquivo .json do repositório no GitHub.  [Automacao-Api-Postman-Testes](https://github.com/ElizabethGomes-QAEngineer/Automacao-Api-Postman-Testes/blob/main/Severest%20API.postman_collection.json)
 Baixe o arquivo da coleção do Postman:
@@ -17,7 +18,7 @@ Abra o Postman, clique em Import e faça o upload do arquivo.
 Execute os testes.
 
 
-# Passo a Passo para Importar a Coleção do Postman
+# 📝 Passo a Passo para Importar a Coleção do Postman
 
 **1. Acesse o Repositório no GitHub**
    
@@ -47,7 +48,7 @@ Sua coleção do Postman aparecerá na aba Collections. Agora você pode rodar o
 
 
 
-# Como Realizar os Testes Dentro do Postman
+# 🎯 Como Realizar os Testes Dentro do Postman
 
 Em "environments" configurar **globals** 
 
@@ -121,7 +122,7 @@ nome
 Elizabeth
 ```
 
-# Passo a Passo Configurações 
+# ⚙️ Passo a Passo Configurações 
 
 
 1. Em **POST** Cadastro Usuario em **cadastrar usuário**
@@ -159,7 +160,7 @@ Elizabeth
    depois clicar em **"save"**
 
 
-# Ordem para Executar os Testes dar um **"send"**
+# ✏️ Ordem para Executar os Testes dar um **"send"**
 
 1. **POST** Cadastra Usuario
 2. **POST** Automação Login Gera Diferentes Tokens
