@@ -1,7 +1,7 @@
 ![Texto alternativo](APIset.png)
 
 
-# "Cenário de Testes Automatizados com Postman"
+# Cenário de Testes Automatizados com Postman
 
 No repositório, você encontrará um cenário de teste completo desenvolvido com Postman, abrangendo as seguintes funcionalidades:
 
