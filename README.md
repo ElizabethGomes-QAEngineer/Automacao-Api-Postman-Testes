@@ -54,7 +54,7 @@ Execute o Postman no seu computador.
 Na tela inicial do Postman, clique em Import (canto superior esquerdo).
 Escolha a opção Upload Files.
 
-Selecione o arquivo .json que você baixou (por exemplo, Severest API.postman_collection.json).
+Selecione o arquivo .json que você baixou (Severest API.postman_collection.json).
 Clique em Open para importar.
 
 **5. Coleção Importada**
