@@ -1,7 +1,7 @@
 ![Texto alternativo](APIset.png)
 
 
-# Cenário de Testes Automatizados com Postman
+# 🚀 Cenário de Testes Automatizados com Postman
 
 No repositório, você encontrará um cenário de teste completo desenvolvido com Postman, abrangendo as seguintes funcionalidades:
 
@@ -14,7 +14,7 @@ No repositório, você encontrará um cenário de teste completo desenvolvido co
 **4. Deleção de Produtos:** Encerrando o ciclo, o produto criado é deletado automaticamente, simulando o fluxo real de uso.
 
 
-Esse projeto combina boas práticas de testes API com automação robusta, oferecendo um exemplo prático e eficiente para cenários de teste dinâmicos. 🚀
+Esse projeto combina boas práticas de testes API com automação robusta, oferecendo um exemplo prático e eficiente para cenários de teste dinâmicos. 
 
 **Este cenário foi exportado da minha "collections" direto do postman**
 
