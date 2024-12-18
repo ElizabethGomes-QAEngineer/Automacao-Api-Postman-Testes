@@ -1,3 +1,6 @@
+![Texto alternativo](APIset.png)
+
+
 Cenário de teste criado utilizando o postman para automatizar usuário rondomico ,
 depois criar automação de produto rodomicamente além de
 buscar este produto e depois deletar produto criado rondomicamente.
