@@ -36,8 +36,8 @@ Cenário criado apartir do site
 
 **1. Acesse o Repositório no GitHub**
    
-Abra o seu repositório no GitHub onde a coleção do Postman foi salva.
-Navegue até o arquivo .json da sua coleção (por exemplo, Severest API.postman_collection.json).
+Abra o repositório no GitHub onde a coleção do Postman foi salva.
+Navegue até o arquivo .json da coleção (Severest API.postman_collection.json).
 
 **2. Baixe o Arquivo .json**
    
