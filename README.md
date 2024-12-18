@@ -1,11 +1,17 @@
 ![Texto alternativo](APIset.png)
 
 
-Cenário de teste criado utilizando o postman para automatizar usuário rondomico ,
-depois criar automação de produto rodomicamente além de
-buscar este produto e depois deletar produto criado rondomicamente.
+# "Cenário de Testes Automatizados com Postman"
 
-Este cenário foi exportado da "collections" direto do postman 
+No repositório, você encontrará um cenário de teste completo desenvolvido com Postman, abrangendo as seguintes funcionalidades:
+
+Criação de Usuários Randômicos: Automação para gerar usuários com dados aleatórios, garantindo maior realismo nos testes.
+Cadastro de Produtos Aleatórios: Após criar o usuário, o cenário automatiza o registro de produtos com informações geradas dinamicamente.
+Busca de Produtos: Verificação automatizada que permite localizar o produto criado, garantindo a integridade e funcionalidade do processo.
+Deleção de Produtos: Encerrando o ciclo, o produto criado é deletado automaticamente, simulando o fluxo real de uso.
+Esse projeto combina boas práticas de testes API com automação robusta, oferecendo um exemplo prático e eficiente para cenários de teste dinâmicos. 🚀
+
+**Este cenário foi exportado da "collections" direto do postman**
 
 [Download Postman](https://www.postman.com/downloads/)
 
