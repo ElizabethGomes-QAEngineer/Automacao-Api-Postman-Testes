@@ -16,7 +16,7 @@ No repositório, você encontrará um cenário de teste completo desenvolvido co
 
 Esse projeto combina boas práticas de testes API com automação robusta, oferecendo um exemplo prático e eficiente para cenários de teste dinâmicos. 🚀
 
-**Este cenário foi exportado da "collections" direto do postman**
+**Este cenário foi exportado da minha "collections" direto do postman**
 
 [Download Postman](https://www.postman.com/downloads/)
 
